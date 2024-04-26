@@ -15,7 +15,7 @@ Welcome to the Shop Website repository! This project is a Django-based web appli
 - User authentication: Users can register, log in, and log out.
 - User roles: Supports both customer and seller roles.
 - Product management: Sellers can add, update, and remove products.
-- Shopping cart: Customers can add products to their cart and place orders.
+- Shopping cart: Customers can add products to their cart and remove them from the cart.
 - Responsive design: Designed to be usable on both desktop and mobile devices.
 
 ## Installation
