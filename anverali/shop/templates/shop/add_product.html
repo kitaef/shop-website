@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Add product - Anverali Marketplace
+{% endblock title %}
+
+{% block content %}
+<form method="post" class="shade">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Product</button>
+</form>
+{% endblock content %}

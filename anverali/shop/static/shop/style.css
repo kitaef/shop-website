@@ -1,0 +1,215 @@
+html {
+    background: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #B5C18E;
+    
+}
+html::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.43);
+    z-index: -1;
+}
+
+#anverali {
+    color:rgb(73, 64, 39);
+    font-size: 35px;
+    position: absolute;
+    justify-self: center;
+    margin-top:30px;
+    font-family: "Pacifico", serif;
+    font-weight:50;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    color:rgb(73, 64, 39);
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 200;
+    margin: 20px;
+}
+
+.greet {
+    font-size: 30px;
+    color:rgb(73, 64, 39);
+    text-align: center;;
+    font-style: normal;
+    font-weight: 200;
+    margin: 20px;
+}
+
+.corner-button {
+    border-radius: 10px;
+    margin: 0px 5px;
+    font-size: 22px;
+    width: 100px;
+    background-color: #b1de86be;
+    text-align: center;
+}
+.corner-button:hover {
+    color:beige;
+}
+
+.corner-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.menu { 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #b1de86aa;
+    margin:10px;
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-size: 30px;
+    border-radius: 20px;
+    color:rgb(73, 64, 39);
+    z-index: 1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.menu-button {
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    margin: 20px 20px;
+    width: 100px;
+    
+}
+
+.shade {
+    background-color: rgba(237, 231, 205, 0.797);
+    border-radius: 15px;
+    padding:10px
+}
+
+.menu-button:hover {
+    color:beige;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 150px; /* Adjust width as needed */
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex: 1;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+}
+
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+    -ms-flex-align: center;
+}
+
+#welcome {
+    color: rgb(73, 64, 39);
+}
+
+.form {
+    margin: 50px;
+}
+
+.table-bordered {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style table header */
+.table-bordered th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #9e7f46;
+}
+
+/* Style table body */
+.table-bordered td {
+    padding: 8px;
+    border-top: 1px solid #e0c28a;
+}
+
+.btn-primary {
+    background-color: #b1de86aa;
+    color: #000000;
+    border: none;
+    margin: 3px;
+    padding: 6px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #c2f993aa;
+}
+
+/* Inactive Button */
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #454748;
+    border: none;
+    margin: 3px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    color: #6c757d;
+}
+
+.error {
+    background-color: #ff95959a; /* Yellow */
+    color: #000000; /* Dark yellow text */
+    border: 1px solid #730000; /* Yellow border */
+    padding: 3px; /* Padding around the message */
+    margin-bottom: 10px; /* Margin at the bottom to separate from other content */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.success {
+    background-color: #95ffa19a; /* Yellow */
+    color: #000000; /* Dark yellow text */
+    border: 1px solid #087300; /* Yellow border */
+    padding: 3px; /* Padding around the message */
+    margin-bottom: 10px; /* Margin at the bottom to separate from other content */
+    border-radius: 5px; /* Rounded corners */
+}

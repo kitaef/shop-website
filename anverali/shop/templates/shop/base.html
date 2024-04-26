@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h0 id="anverali">Anverali</h0>
+    </div>
+    <div class="corner-container">
+        {% if request.user.is_authenticated%}
+        {% if request.user.user_type == 1 and not user.is_staff %}
+        <div class="corner-button"><a href="{% url 'cart' %}">my cart</a></div>
+        {% endif %}
+        <div class="corner-button"><a href="{% url 'logout' %}">logout</a></div>
+        {% else %}
+        <div class="corner-button"><a href="{% url 'login' %}">login</a></div>
+        <div class="corner-button"><a href="{% url 'register' %}">register</a></div>
+        {% endif %}
+    </div>
+    <div class="center">
+        <div class="menu">
+            <div>
+                <a class="menu-button" href="/">Home</a>
+            </div>
+            <div>
+                <a class="menu-button" href="{% url 'catalog' %}">Catalog</a>
+            </div>
+            <div>
+                <a class="menu-button" href="{% url 'profile' %}">Profile</a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>

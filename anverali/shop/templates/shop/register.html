@@ -1,0 +1,57 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Anverali Marketplace
+{% endblock title%}
+
+{% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="center shade">
+            <h2>User Registration</h2>
+            {% if form.errors %}
+                <div class="error">
+                    Please correct the following errors.
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="id_first_name">First Name:</label>
+                <input type="text" id="id_first_name" name="first_name" value="{{ user.first_name }}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="id_last_name">Last Name:</label>
+                <input type="text" id="id_last_name" name="last_name" value="{{ user.last_name }}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">Password:</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+                {{ form.password2 }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.user_type.id_for_label }}">Choose your account type:</label>
+                {{ form.user_type }}
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

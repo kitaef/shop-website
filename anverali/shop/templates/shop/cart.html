@@ -1,0 +1,33 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Cart - Anverali Marketplace
+{% endblock title %}
+
+{% block content %}
+<div class="center">
+    <h3>My cart</h3>
+    <table class="table table-bordered shade">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart %}
+            <tr>
+                <td>{{item.product.name}}</td>
+                <td>{{item.product.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>
+                    <a href="{% url 'remove_from_cart' item.id %}" class="btn btn-primary">remove from cart</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

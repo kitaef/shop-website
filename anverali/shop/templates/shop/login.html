@@ -1,0 +1,38 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Login - Anverali Marketplace
+{% endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="center shade">
+            <h2>User login</h2>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                        <div class="success" role="alert">
+                            {{ message }}
+                        </div>
+                    {% elif message.tags == 'error' %}
+                        <div class="error" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {% if field.field.widget.input_type != 'checkbox' %}
+                    {{ field }}
+                    {% else %}
+                    {{ field }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+    </form>
+{% endblock content %}

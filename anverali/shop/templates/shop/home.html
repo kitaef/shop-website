@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Anverali Marketplace
+{% endblock title %}
+
+{% block content %}
+<div class="center">
+    {% if not request.user.is_authenticated %}
+        <h0 class="greet">Welcome to Anverali market place!<br>Please authorise to start shopping.</h0>
+    {% else %}
+        <div class="greet">
+            <h0>Hello, {{ request.user.username }}</h0>
+        </div>
+        <div class="greet">
+            <h0>Your account type is {{ request.user.get_user_type_display }}</h0>
+        </div>
+    {% endif %}
+</div>
+{% endblock content %}
