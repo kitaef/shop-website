@@ -31,7 +31,7 @@ git clone https://github.com/kitaef/shop-website.git
 2. Go to project folder:
 
 ```bash
-cd anverali
+cd shop-website
 ```
 
 3. Run the docker container:
